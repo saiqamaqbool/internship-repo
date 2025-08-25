@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="head.css">
+  
+ 
+  <title>form</title>
+ 
+  
+</head>
+<body>
+  
+  <div class="banner">
+    <img src="images/new2.jpg" alt="Banner">
+  </div>
+<nav>
+    <a href="imagepage.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="form.html">Form</a>
+  </nav>
+  <form>
+    <table border="1">
+      <tr>
+        <td><label for="fullname">Full Name:</label></td>
+        <td><input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter Your Name"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" required placeholder="Example@abc.com"></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone Number:</label></td>
+        <td><input type="text" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number must be exactly 10 digits" placeholder="+9123456345"></td>
+      </tr>
+      <tr>
+        <td><label for="age">Age:</label></td>
+        <td><input type="number" id="age" name="age" required min="18" max="60"></td>
+      </tr>
+      <tr>
+        <td><label for="eventdate">Event Date:</label></td>
+        <td><input type="date" id="eventdate" name="eventdate" required min="2025-08-25" max="2025-08-25"></td>
+      </tr>
+      <tr>
+        <td><label for="eventtype">Event Type:</label></td>
+        <td>
+          <select id="eventtype" name="eventtype" required>
+            <option value="">--Select--</option>
+            <option value="workshop">Workshop</option>
+            <option value="webinar">Webinar</option>
+            <option value="hackathon">Hackathon</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label><input type="checkbox" name="terms" required> I agree to the Terms</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <button type="submit">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  
+</body>
+</html>

@@ -1,0 +1,125 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      /* text-align: center; */
+      background: #fafafa;
+    }
+
+   
+    .banner img {
+       width: 90%;        /* leaves gap on left + right (not 100%) */
+  height: 400px;
+  margin: 15px auto; /* top + bottom = 15px, left + right = auto (center) */
+  display: block;    
+  object-fit: cover;
+  border: 3px solid #333;
+  border-radius: 10px;
+      /* width: 100%;
+      height: auto;
+      display: block;
+       margin: 50px auto;
+        border-radius: 10px; */
+    }
+
+    
+    nav {
+      /* background-color: hsl(0, 19%, 95%); */
+      padding: 15px 0;
+      text-align: center; 
+    }
+
+    nav a {
+      color: rgb(39, 36, 36);
+      text-decoration: none;
+      text-align: center; 
+      margin: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #910b54;
+    }
+
+    
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 10px;
+    }
+
+    .products img {
+      width: 300px;
+      max-width: 90%;
+      height: auto;
+      outline: 2px solid black;
+      border-radius: 8px;
+    }
+
+   
+    @media (max-width: 768px) {
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+      .products img {
+        width: 90%;
+      }
+    }
+    
+/* css of form page */
+    form {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      margin: auto;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, button {
+      width: 90;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    td[colspan="2"] {
+      text-align: center;
+    }
+  /* css of about us page */
+  dt::before {
+    content: "• ";   
+  }
+  dd::before {
+    content: "○ ";   
+  }
+
+  h3 {
+  color: green;     
+  font-weight: bold; 
+}
