@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VistaVoyage</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  
+  
+  <style>
+   .carousel-item img {
+      height: 100vh;       /* full screen height */
+      object-fit: cover;   /* crop instead of stretching */
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .navbar {
+      background-color: #0d6efd;
+    }
+    .navbar-brand {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+    }
+    h2 {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 700;
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      padding: 30px 0;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">VistaVoyage</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Carousel) -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/travelbanner1.jpg" class="d-block w-100" alt="Travel 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/travelbanner2.jpg" class="d-block w-100" alt="Travel 2">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- About Us -->
+  <section id="about" class="container my-5">
+    <h2 class="text-center mb-4">About Us</h2>
+    <p class="text-center">
+      Welcome to <strong>VistaVoyage</strong>! We help you discover the most amazing places around the world. 
+  Whether you love beaches, mountains, or cities, our curated destinations will inspire your next trip. 
+  Our goal is to make travel planning simple, exciting, and stress-free by bringing together hidden gems, 
+  popular landmarks, and unforgettable experiences. With us, every journey becomes more than just a trip. 
+  it's a story waiting to be lived and shared!
+    </p>
+  </section>
+
+  <!-- Destinations -->
+  <section id="destinations" class="container my-5">
+    <h2 class="text-center mb-4">Popular Destinations</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="images/paris.jpg" class="card-img-top" alt="Paris">
+          <div class="card-body">
+            <h5 class="card-title">Paris</h5>
+            <p class="card-text">The city of lights and love awaits you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="images/newyork.jpg" class="card-img-top" alt="New York">
+          <div class="card-body">
+            <h5 class="card-title">New York</h5>
+            <p class="card-text">Experience the city that never sleeps.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="images/bali.jpg" class="card-img-top" alt="Bali">
+          <div class="card-body">
+            <h5 class="card-title">Bali</h5>
+            <p class="card-text">Relax on stunning beaches and enjoy tropical vibes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container my-5 text-center">
+    <h2 class="mb-4">Contact Us</h2>
+    <p>Email: info@vistavoyage.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p> Vista Voyage | All Rights Reserved</p>
+      <div class="mb-3">
+        <a href="#"><i class="bi bi-facebook fs-3"></i></a>
+        <a href="#"><i class="bi bi-instagram fs-3"></i></a>
+        <a href="#"><i class="bi bi-twitter fs-3"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
