@@ -1,0 +1,232 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>validation with javascript</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+ <div class="container mt-3">
+ <form name="myForm">
+  <div class="mb-3 mt-3">
+    <label for="text">Name</label>
+    <input  type="text" class="form-control" id="text" placeholder="enter name" name="fname">
+
+  </div>
+  <div class="mb-3">
+<label for="number">number</label>
+    <input  type="number" class="form-control" id="number" placeholder="enter the number" name="num">
+
+  </div>
+  <div class="mb-3">
+<label for="date">Date</label>
+    <input  type="date" class="form-control" id="date" placeholder="enter the date" name="date" >
+
+  </div>
+  <div class="mb-3">
+<label for="comment">comment</label>
+    <input  type="text" class="form-control" id="comment" placeholder="write!" name="com" >
+
+  </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+   
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("num").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x < 20 || x > 30) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  
+}
+
+
+function validateForm() {
+  let x = document.forms["myForm"]["fname"]["num"]["date"]["dcom"].value;
+  if (x == "") {
+    alert("this must be filled out");
+    return false;
+  }
+}
+</script>
+
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation with JavaScript</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .error-box {
+      background-color: #f8d7da;
+      color: #842029;
+      border: 1px solid #f5c2c7;
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-4">
+  <form id="myForm" class="row g-3">
+    
+    <!-- Name -->
+    <div class="col-12 row align-items-center">
+      <label for="text" class="col-sm-3 col-form-label">Name</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="text" name="fname"
+               oninput="validateName()" onchange="validateName()">
+        <div id="nameError" class="error-box d-none"></div>
+      </div>
+    </div>
+
+    <!-- Number -->
+    <div class="col-12 row align-items-center">
+      <label for="number" class="col-sm-3 col-form-label">Number</label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="number" name="num"
+               oninput="validateNumber()" onchange="validateNumber()">
+        <div id="numError" class="error-box d-none"></div>
+      </div>
+    </div>
+
+    <!-- Date -->
+    <div class="col-12 row align-items-center">
+      <label for="date" class="col-sm-3 col-form-label">Date</label>
+      <div class="col-sm-6">
+        <input type="date" class="form-control" id="date" name="date"
+               oninput="validateDate()" onchange="validateDate()">
+        <div id="dateError" class="error-box d-none"></div>
+      </div>
+    </div>
+
+    <!-- Comment -->
+    <div class="col-12 row align-items-center">
+      <label for="comment" class="col-sm-3 col-form-label">Comment</label>
+      <div class="col-sm-6">
+        <textarea class="form-control" id="comment" name="com" rows="3"
+                  oninput="validateComment()" onchange="validateComment()"></textarea>
+        <div id="comError" class="error-box d-none"></div>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="col-12 row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<script>
+// Show error in red box
+function showError(id, message) {
+  const errorDiv = document.getElementById(id);
+  if (message) {
+    errorDiv.textContent = message;
+    errorDiv.classList.remove("d-none");
+  } else {
+    errorDiv.textContent = "";
+    errorDiv.classList.add("d-none");
+  }
+}
+
+// Validate Name: length between 4–30
+function validateName() {
+  const name = document.getElementById("text").value.trim();
+  if (name.length < 4 || name.length > 30) {
+    showError("nameError", "Name must be between 4 and 30 characters.");
+    return false;
+  }
+  showError("nameError", "");
+  return true;
+}
+
+// Validate Number: between 20–30
+function validateNumber() {
+  const num = document.getElementById("number").value;
+  if (num === "" || num < 20 || num > 30) {
+    showError("numError", "Number must be between 20 and 30.");
+    return false;
+  }
+  showError("numError", "");
+  return true;
+}
+
+// Validate Date: must be a past date
+function validateDate() {
+  const date = document.getElementById("date").value;
+  if (!date) {
+    showError("dateError", "Please select a date.");
+    return false;
+  }
+  const selectedDate = new Date(date);
+  const today = new Date();
+  if (selectedDate >= today) {
+    showError("dateError", "Date must be a past date.");
+    return false;
+  }
+  showError("dateError", "");
+  return true;
+}
+
+// Validate Comment: max 100 characters
+function validateComment() {
+  const com = document.getElementById("comment").value;
+  if (com.length === 0) {
+    showError("comError", "Comment cannot be empty.");
+    return false;
+  }
+  if (com.length > 100) {
+    showError("comError", "Comment must not exceed 100 characters.");
+    return false;
+  }
+  showError("comError", "");
+  return true;
+}
+
+// Validate All on Submit
+document.getElementById("myForm").onsubmit = function (e) {
+  const isValid =
+    validateName() &
+    validateNumber() &
+    validateDate() &
+    validateComment();
+
+  if (!isValid) {
+    e.preventDefault();
+    alert("Please fix errors before submitting.");
+  }
+};
+</script>
+</body>
+</html>
