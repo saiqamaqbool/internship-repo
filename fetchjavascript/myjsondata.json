@@ -1,0 +1,27 @@
+{"users":[
+  {
+    "userId": 1,
+    "id": 1,
+    "name": "sanju",
+    "Email": "sanju@123"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "name": "aasim",
+    "Email": "aasim@123"
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "name": "aamir",
+    "Email": "aamir@123"
+  },
+  {
+  "userId":1,
+   "id": 4,
+  "name": "saniya",
+   "Email": "saniya@123"
+  }
+]
+}
