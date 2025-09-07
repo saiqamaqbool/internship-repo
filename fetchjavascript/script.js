@@ -1,4 +1,4 @@
- const fetchBtn = document.getElementById("fetchBtn");
+ const fetchBtn = document.getElementById("fetchBtnid");
     const loader = document.getElementById("loader");
     const table = document.getElementById("dataTable");
     const tbody = table.querySelector("tbody");
