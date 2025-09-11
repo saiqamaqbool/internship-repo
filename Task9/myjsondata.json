@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "sanju",
+      "Email": "sanju@123"
+    },
+    {
+      "id": "2",
+      "name": "aasim",
+      "Email": "aasim@123"
+    },
+    {
+      "id": "4",
+      "name": "sahiba",
+      "Email": "sahiba@123"
+    },
+    {
+      "id": "5",
+      "name": "iqra",
+      "Email": "iqra@123"
+    },
+    {
+      "id": "6",
+      "name": "nida",
+      "Email": "nida@123"
+    },
+    {
+      "id": "10",
+      "name": "surmaidanhi",
+      "Email": "manager@gmail.com"
+    },
+    {
+      "id": 11,
+      "name": "dinks",
+      "Email": "dinks@1234re"
+    },
+    {
+      "id": 12,
+      "name": "12thname",
+      "Email": "12themail@1234"
+    },
+    {
+      "id": 13,
+      "name": "13tname",
+      "Email": "13themail@jh"
+    }
+  ]
+}
